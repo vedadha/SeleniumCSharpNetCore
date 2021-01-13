@@ -10,6 +10,8 @@ namespace SeleniumCSharpNetCore
         [SetUp]
         public void Setup()
         {
+            ChromeOptions option = new ChromeOptions();
+            option.AddArgument("--headless");
             System.Console.WriteLine("Setup");
             Driver = new ChromeDriver() ;   
         }
